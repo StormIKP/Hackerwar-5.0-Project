@@ -10,7 +10,7 @@ const ContractForm = () => {
     paymentStatus: 'unpaid',
     negotiation: ''
   });
-
+  
   const { crop, quantity, price, comments, paymentStatus, negotiation } = formData;
 
   const onChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,7 +18,7 @@ const ContractForm = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/contract', {
+      const res = await fetch('http://dee-p8cg.onrender.com/api/contract', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

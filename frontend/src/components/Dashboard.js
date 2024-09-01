@@ -7,7 +7,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchContracts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/contract", {
+        const res = await fetch("https://dee-p8cg.onrender.com/api/contract", {
           method: "GET",
           headers: { "x-auth-token": localStorage.getItem("token") },
         });

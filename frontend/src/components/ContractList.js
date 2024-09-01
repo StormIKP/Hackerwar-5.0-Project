@@ -208,11 +208,11 @@ import "./ContractList.css";
 const ContractList = () => {
   const [contracts, setContracts] = useState([]);
   const [images, setImages] = useState({});
-
+  
   useEffect(() => {
     const fetchContracts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/contract", {
+        const res = await fetch("https://dee-p8cg.onrender.com/api/contract", {
           method: "GET",
           headers: { "x-auth-token": localStorage.getItem("token") },
         });
@@ -256,7 +256,7 @@ const ContractList = () => {
 
   const handleStatusChange = async (id, status) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/contract/${id}`, {
+      const res = await fetch(`https://dee-p8cg.onrender.com/api/contract/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
